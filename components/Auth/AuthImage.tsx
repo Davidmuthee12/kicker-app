@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AuthImage() {
   return (
-    <div className="flex items-center justify-center bg-amber-400 h-screen">
+    <div className="hidden h-full items-center justify-center md:flex">
       <Image
         src="/auth.png"
         alt="Authentication Image"

@@ -1,7 +1,11 @@
+import HeroSection from "@/components/HomePage/HeroSection";
+import Navbar from "@/components/HomePage/Navbar";
+
 export default function Home() {
   return (
     <>
-      <h1>Hello Don Bosko</h1>
+      <Navbar />
+      <HeroSection />
     </>
   );
 }

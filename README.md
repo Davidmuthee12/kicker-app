@@ -16,6 +16,31 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Registration API Configuration
+
+This project uses a two-step registration flow:
+
+1. The client form submits to `NEXT_PUBLIC_REGISTER_API_ENDPOINT` (defaults to `/api/form`).
+2. `app/api/form/route.ts` validates input and forwards it to your backend using `API_BASE_URL + API_REGISTER_PATH`.
+
+Copy `.env.example` values into your local env file (for example `.env.local`) and set values per environment.
+
+Example dev values:
+
+```env
+NEXT_PUBLIC_REGISTER_API_ENDPOINT=/api/form
+API_BASE_URL=http://localhost:8080
+API_REGISTER_PATH=/auth/register
+```
+
+Example production values:
+
+```env
+NEXT_PUBLIC_REGISTER_API_ENDPOINT=/api/form
+API_BASE_URL=https://api.yourdomain.com
+API_REGISTER_PATH=/auth/register
+```
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

@@ -130,7 +130,7 @@ export default function Login() {
           <p className="text-center text-xs text-zinc-400">
             New here?{" "}
             <Link
-              href="/auth/register"
+              href="/register"
               className="font-semibold text-zinc-900 hover:underline"
             >
               Create account →

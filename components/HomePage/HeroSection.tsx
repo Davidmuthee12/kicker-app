@@ -6,8 +6,8 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <>
-      <div className="grid h-full grid-cols-2">
-        <div className="flex flex-col items-start justify-center gap-6 p-10 max-w-xl">
+      <div className="grid h-full grid-cols-1 md:grid-cols-2">
+        <div className="flex flex-col items-center md:items-start justify-center gap-6 px-6 py-12 md:p-10 text-center md:text-left max-w-xl mx-auto md:mx-0">
           <Badge
             variant="secondary"
             className="flex items-center gap-2 bg-blue-500 text-white border border-blue-500/20 px-3 py-2 rounded-full"
@@ -16,14 +16,14 @@ export default function HeroSection() {
             Trusted by Athletes
           </Badge>
 
-          <h1 className="text-5xl font-extrabold leading-tight tracking-tight">
+          <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight">
             Be Stronger Than
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
               Your Excuses
             </span>
           </h1>
 
-          <p className="text-gray-400 text-lg leading-relaxed">
+          <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
             Transform your body, build discipline, and unlock your full
             potential with personalized training programs.
           </p>
@@ -38,26 +38,26 @@ export default function HeroSection() {
 
             <Link
               href="#"
-              className="text-gray-500 hover:text-gray-700 transition"
+              className="text-gray-400 hover:text-white transition"
             >
               Explore Programs →
             </Link>
           </div>
         </div>
 
-        <div className="flex items-center justify-center p-10 relative">
-          {/*  Background Ring */}
-          <div className="absolute w-[600px] h-[600px] bg-blue-700 rounded-full  opacity-30"></div>
+        <div className="flex items-center justify-center px-6 py-10 md:p-10 relative">
+          {/* Background Ring */}
+          <div className="absolute w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] md:w-[600px] md:h-[600px] bg-blue-700 rounded-full opacity-30"></div>
 
-          {/* second gradient layer */}
-          <div className="absolute w-[400px] h-[400px] bg-purple-700 rounded-full  opacity-20"></div>
+          {/* Second gradient layer */}
+          <div className="absolute w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] bg-purple-700 rounded-full opacity-20"></div>
 
           <Image
             src="/ripped.png"
             alt="Hero Image"
             width={350}
             height={500}
-            className="object-contain relative z-10"
+            className="object-contain relative z-10 max-h-[300px] sm:max-h-[420px] md:max-h-none w-auto"
           />
         </div>
       </div>

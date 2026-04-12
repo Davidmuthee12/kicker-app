@@ -27,7 +27,6 @@ export default function CallAction() {
           This is more than a workout — it&apos;s a lifestyle upgrade.
         </p>
 
-        {/* CTA Section */}
         <div className="flex items-center justify-center md:justify-start gap-4 pt-2">
           <Link
             href="/register"

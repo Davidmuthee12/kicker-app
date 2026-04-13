@@ -16,7 +16,7 @@ const contactSchema = z.object({
 type ContactFormData = z.infer<typeof contactSchema>;
 
 const inputClasses =
-  "w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-gray-500 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10";
+  "w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm text-zinc-900 placeholder:text-gray-400 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10";
 
 export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -42,15 +42,15 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="rounded-[28px] border border-white/10 bg-white/5 p-6 shadow-2xl shadow-blue-950/20 backdrop-blur-md sm:p-8">
+    <div className="rounded-[28px] border border-black/10 bg-white p-6 shadow-xl shadow-blue-100/60 sm:p-8">
       <div className="mb-6">
         <p className="text-sm font-medium uppercase tracking-[0.3em] text-blue-400">
           Contact Form
         </p>
-        <h2 className="mt-3 text-3xl font-extrabold text-white">
+        <h2 className="mt-3 text-3xl font-extrabold text-zinc-950">
           Let&apos;s start your next chapter
         </h2>
-        <p className="mt-3 text-sm leading-relaxed text-gray-400">
+        <p className="mt-3 text-sm leading-relaxed text-gray-600">
           This form is wired for validation now and can be connected to the
           backend once your endpoint is ready.
         </p>
@@ -60,7 +60,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="name"
-            className="mb-2 block text-sm font-medium text-gray-200"
+            className="mb-2 block text-sm font-medium text-zinc-700"
           >
             Full name
           </label>
@@ -81,7 +81,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="email"
-            className="mb-2 block text-sm font-medium text-gray-200"
+            className="mb-2 block text-sm font-medium text-zinc-700"
           >
             Email address
           </label>
@@ -102,7 +102,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="phone"
-            className="mb-2 block text-sm font-medium text-gray-200"
+            className="mb-2 block text-sm font-medium text-zinc-700"
           >
             Phone number
           </label>
@@ -133,7 +133,7 @@ export default function ContactForm() {
       </form>
 
       {isSubmitted && (
-        <div className="mt-5 rounded-2xl border border-emerald-400/20 bg-emerald-400/10 px-4 py-3 text-sm text-emerald-200">
+        <div className="mt-5 rounded-2xl border border-emerald-400/20 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
           Your details have been captured locally for now. We can connect this
           form to the backend once that endpoint is available.
         </div>

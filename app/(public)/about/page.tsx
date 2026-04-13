@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Sparkles, Target, Users } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Sparkles,
+  Target,
+  Users,
+} from "lucide-react";
 
 import Navbar from "@/components/HomePage/Navbar";
 import PageHero from "@/components/PublicPages/PageHero";
@@ -41,7 +47,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-white text-black">
       <Navbar />
       <PageHero
         badge="About Kicker"
@@ -60,7 +66,7 @@ export default function AboutPage() {
               <h2 className="mt-4 text-3xl font-extrabold sm:text-4xl">
                 We help members turn motivation into a rhythm they can keep.
               </h2>
-              <p className="mt-5 max-w-2xl text-base leading-8 text-gray-400">
+              <p className="mt-5 max-w-2xl text-base leading-8 text-gray-600">
                 Kicker was shaped around a simple idea: progress happens faster
                 when training is clear, personalized, and backed by the right
                 energy. Instead of overwhelming members with noise, we focus on
@@ -72,7 +78,7 @@ export default function AboutPage() {
                 {milestones.map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <CheckCircle2 className="mt-1 size-5 text-blue-400" />
-                    <p className="text-gray-300">{item}</p>
+                    <p className="text-gray-700">{item}</p>
                   </div>
                 ))}
               </div>
@@ -86,7 +92,7 @@ export default function AboutPage() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 text-gray-300 transition hover:text-white"
+                  className="inline-flex items-center gap-2 text-gray-600 transition hover:text-black"
                 >
                   Speak to the team
                   <ArrowRight className="size-4" />
@@ -97,7 +103,7 @@ export default function AboutPage() {
             <div className="relative flex justify-center">
               <div className="absolute h-72 w-72 rounded-full bg-blue-600/20 blur-3xl" />
               <div className="absolute bottom-10 right-10 h-52 w-52 rounded-full bg-purple-600/20 blur-3xl" />
-              <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-white/5 p-4 backdrop-blur-md">
+              <div className="relative overflow-hidden rounded-[32px] border border-black/10 bg-white p-4 shadow-xl shadow-blue-100/60">
                 <Image
                   src="/hero.png"
                   alt="Athlete training at Kicker"
@@ -110,7 +116,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="border-y border-white/10 bg-white/[0.03] px-6 py-20">
+        <section className="border-y border-black/5 bg-slate-50 px-6 py-20">
           <div className="mx-auto max-w-6xl">
             <div className="max-w-2xl">
               <p className="text-sm font-medium uppercase tracking-[0.3em] text-blue-400">
@@ -120,7 +126,7 @@ export default function AboutPage() {
                 The same energy as the landing page, carried into the whole
                 brand.
               </h2>
-              <p className="mt-4 text-gray-400">
+              <p className="mt-4 text-gray-600">
                 Bold visuals matter, but the experience behind them matters even
                 more. These principles shape how Kicker coaches, programs, and
                 supports members.
@@ -134,7 +140,7 @@ export default function AboutPage() {
                 return (
                   <article
                     key={pillar.title}
-                    className="rounded-[28px] border border-white/10 bg-black/60 p-6 backdrop-blur-md transition hover:-translate-y-1"
+                    className="rounded-[28px] border border-black/10 bg-white p-6 shadow-lg shadow-black/5 transition hover:-translate-y-1"
                   >
                     <div className="flex size-12 items-center justify-center rounded-2xl bg-gradient-to-r from-blue-500 to-purple-500">
                       <Icon className="size-5 text-white" />
@@ -142,7 +148,7 @@ export default function AboutPage() {
                     <h3 className="mt-5 text-xl font-semibold">
                       {pillar.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-7 text-gray-400">
+                    <p className="mt-3 text-sm leading-7 text-gray-600">
                       {pillar.description}
                     </p>
                   </article>
@@ -153,8 +159,8 @@ export default function AboutPage() {
         </section>
 
         <section className="px-6 py-20">
-          <div className="mx-auto grid max-w-6xl gap-8 rounded-[32px] border border-white/10 bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-8 md:grid-cols-[0.95fr_1.05fr] md:p-10">
-            <div className="relative min-h-72 overflow-hidden rounded-[28px] border border-white/10 bg-black/50">
+          <div className="mx-auto grid max-w-6xl gap-8 rounded-[32px] border border-black/10 bg-gradient-to-r from-blue-50 to-purple-50 p-8 md:grid-cols-[0.95fr_1.05fr] md:p-10">
+            <div className="relative min-h-72 overflow-hidden rounded-[28px] border border-black/10 bg-white">
               <Image
                 src="/sprint.png"
                 alt="Kicker training session"
@@ -170,7 +176,7 @@ export default function AboutPage() {
               <h2 className="mt-4 text-3xl font-extrabold sm:text-4xl">
                 Training that feels intense, clear, and worth showing up for.
               </h2>
-              <p className="mt-4 max-w-2xl leading-8 text-gray-300">
+              <p className="mt-4 max-w-2xl leading-8 text-gray-700">
                 Kicker combines coaching structure with a high-energy aesthetic
                 that keeps the brand memorable. If you want to add more imagery
                 later, this page is ready for studio shots, coaching portraits,

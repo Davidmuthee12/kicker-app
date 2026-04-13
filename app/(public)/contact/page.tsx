@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-white text-black">
       <Navbar />
       <PageHero
         badge="Contact Kicker"
@@ -43,14 +43,14 @@ export default function ContactPage() {
       <main className="px-6 py-20">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <section className="space-y-6">
-            <div className="rounded-[28px] border border-white/10 bg-white/5 p-8 backdrop-blur-md">
+            <div className="rounded-[28px] border border-black/10 bg-white p-8 shadow-lg shadow-black/5">
               <p className="text-sm font-medium uppercase tracking-[0.3em] text-blue-400">
                 Start Here
               </p>
               <h2 className="mt-4 text-3xl font-extrabold">
                 Tell us how you want to train.
               </h2>
-              <p className="mt-4 leading-8 text-gray-400">
+              <p className="mt-4 leading-8 text-gray-600">
                 Whether someone is joining for strength, weight loss, or
                 accountability, this page gives them a clean way to make first
                 contact before the API is ready.
@@ -64,13 +64,13 @@ export default function ContactPage() {
                 return (
                   <article
                     key={item.title}
-                    className="rounded-[24px] border border-white/10 bg-white/5 p-6 backdrop-blur-md"
+                    className="rounded-[24px] border border-black/10 bg-slate-50 p-6"
                   >
                     <div className="flex size-11 items-center justify-center rounded-2xl bg-gradient-to-r from-blue-500 to-purple-500">
                       <Icon className="size-5 text-white" />
                     </div>
                     <h3 className="mt-4 text-lg font-semibold">{item.title}</h3>
-                    <p className="mt-2 text-sm text-gray-400">{item.detail}</p>
+                    <p className="mt-2 text-sm text-gray-600">{item.detail}</p>
                   </article>
                 );
               })}

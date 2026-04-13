@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, Sparkles } from "lucide-react";
+import { Check } from "lucide-react";
 
 import Navbar from "@/components/HomePage/Navbar";
 import PageHero from "@/components/PublicPages/PageHero";
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function PricingPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-white text-black">
       <Navbar />
       <PageHero
         badge="Pricing Plans"
@@ -25,44 +25,24 @@ export default function PricingPage() {
 
       <main className="px-6 py-20">
         <div className="mx-auto max-w-6xl">
-          {/* <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div className="max-w-2xl">
-              <p className="text-sm font-medium uppercase tracking-[0.3em] text-blue-400">
-                Dynamic For Later
-              </p>
-              <h2 className="mt-4 text-3xl font-extrabold sm:text-4xl">
-                Plans are mapped from `data/pricing.ts` for now.
-              </h2>
-              <p className="mt-4 text-gray-400">
-                That gives you editable content today while keeping the page
-                ready for admin-managed pricing once the backend is in place.
-              </p>
-            </div>
-
-            <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300">
-              <Sparkles className="size-4 text-blue-400" />
-              Backend-ready presentation layer
-            </div>
-          </div> */}
-
           <div className="grid gap-6 lg:grid-cols-3">
             {pricing.map((plan) => (
               <article
                 key={plan.name}
                 className={`rounded-[32px] border p-8 backdrop-blur-md transition hover:-translate-y-1 ${
                   plan.featured
-                    ? "border-blue-500/40 bg-gradient-to-b from-blue-500/15 to-purple-500/10 shadow-2xl shadow-blue-950/30"
-                    : "border-white/10 bg-white/5"
+                    ? "border-blue-500/30 bg-gradient-to-b from-blue-50 to-purple-50 shadow-xl shadow-blue-100/70"
+                    : "border-black/10 bg-white shadow-lg shadow-black/5"
                 }`}
               >
                 {plan.featured && (
-                  <div className="mb-5 inline-flex rounded-full border border-blue-400/30 bg-blue-500/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-blue-300">
+                  <div className="mb-5 inline-flex rounded-full border border-blue-400/30 bg-blue-500 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-white">
                     Most Popular
                   </div>
                 )}
 
                 <h3 className="text-2xl font-bold">{plan.name}</h3>
-                <p className="mt-3 text-sm leading-7 text-gray-400">
+                <p className="mt-3 text-sm leading-7 text-gray-600">
                   {plan.description}
                 </p>
                 <p className="mt-8 text-4xl font-extrabold">{plan.price}</p>
@@ -73,10 +53,10 @@ export default function PricingPage() {
                 <div className="mt-8 space-y-4">
                   {plan.benefits.map((benefit) => (
                     <div key={benefit} className="flex items-start gap-3">
-                      <div className="mt-1 flex size-5 items-center justify-center rounded-full bg-blue-500/15">
-                        <Check className="size-3 text-blue-300" />
+                      <div className="mt-1 flex size-5 items-center justify-center rounded-full bg-blue-500">
+                        <Check className="size-3 text-white" />
                       </div>
-                      <span className="text-sm text-gray-300">{benefit}</span>
+                      <span className="text-sm text-gray-700">{benefit}</span>
                     </div>
                   ))}
                 </div>
@@ -86,7 +66,7 @@ export default function PricingPage() {
                   className={`mt-8 inline-flex w-full items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition ${
                     plan.featured
                       ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-900/30 hover:scale-[1.02]"
-                      : "border border-white/10 bg-black/40 text-white hover:border-blue-500/40"
+                      : "border border-black/10 bg-slate-50 text-black hover:border-blue-500/40"
                   }`}
                 >
                   {plan.cta.label}
